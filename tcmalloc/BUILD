@@ -85,6 +85,7 @@ cc_library(
         "libc_override.h",
         "tcmalloc.cc",
         "tcmalloc.h",
+        ":profile_marshaler", # Required to convert profiler output to pprof format
     ],
     copts = TCMALLOC_DEFAULT_COPTS,
     linkstatic = 1,

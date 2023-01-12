@@ -59,11 +59,9 @@ http_archive(
 )
 
 # Proto rules for Bazel and Protobuf
-http_archive(
+local_repository(
     name = "com_google_protobuf",
-    urls = ["https://github.com/protocolbuffers/protobuf/archive/13d559beb6967033a467a7517c35d8ad970f8afb.zip"],
-    strip_prefix = "protobuf-13d559beb6967033a467a7517c35d8ad970f8afb",
-    sha256 = "9ca59193fcfe52c54e4c2b4584770acd1a6528fc35efad363f8513c224490c50",
+    path = "../protobuf",
 )
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 protobuf_deps()
