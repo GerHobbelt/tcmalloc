@@ -19,7 +19,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # Abseil
 local_repository(
     name = "com_google_absl",
-    path = "../abseil-0064d9d-yb-1",
+    path = "../abseil-anubhav-test-1",
 )
 
 # GoogleTest/GoogleMock framework. Used by most unit-tests.
@@ -61,7 +61,7 @@ http_archive(
 # Proto rules for Bazel and Protobuf
 local_repository(
     name = "com_google_protobuf",
-    path = "../protobuf",
+    path = "../protobuf-3.5.1-yb-1",
 )
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 protobuf_deps()
