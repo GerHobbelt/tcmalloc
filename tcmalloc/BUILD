@@ -85,13 +85,13 @@ cc_library(
         "libc_override.h",
         "tcmalloc.cc",
         "tcmalloc.h",
-        ":profile_marshaler", # Required to convert profiler output to pprof format
     ],
     copts = TCMALLOC_DEFAULT_COPTS,
     linkstatic = 1,
     visibility = ["//visibility:public"],
     deps = tcmalloc_deps + [
         ":common",
+        ":profile_marshaler", # Required to convert profiler output to pprof format
         "//tcmalloc/internal:overflow",
         "//tcmalloc/internal:page_size",
     ],
