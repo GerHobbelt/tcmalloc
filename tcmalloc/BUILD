@@ -91,6 +91,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = tcmalloc_deps + [
         ":common",
+        ":want_no_hpaa",
         "//tcmalloc/internal:overflow",
         "//tcmalloc/internal:page_size",
     ],
